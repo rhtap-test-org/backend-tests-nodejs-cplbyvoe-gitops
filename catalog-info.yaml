@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: backend-tests-nodejs-cplbyvoe-gitops
+  description: This is GitOps manifest for backend-tests-nodejs-cplbyvoe   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=backend-tests-nodejs-cplbyvoe
+    backstage.io/kubernetes-id: backend-tests-nodejs-cplbyvoe 
+    backstage.io/techdocs-ref: dir:.
+    dev.azure.com/project: shared-public
+    dev.azure.com/build-definition: backend-tests-nodejs-cplbyvoe-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:backend-tests-nodejs-cplbyvoe
