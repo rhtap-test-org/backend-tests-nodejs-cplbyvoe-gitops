@@ -12,5 +12,5 @@ spec:
   template: 
     spec:
       containers:
-      - image: quay.io/redhat-tssc/task-runner:1.9
+      - image: quay.io/tsscui/backend-tests-nodejs-cplbyvoe:azure-e58d40394c3310f8d12c44a50336681e303d50ac
         name: container-image  
